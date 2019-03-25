@@ -8,8 +8,8 @@ def DFS(graph,node):
     #If the node is not in the visited list, then enter the loop else go back to the previous recursive call
     if node not in visited:
         visited.append(node)
-        for n in graph[node]:
-            DFS(graph,n)
+        for i in graph[node]:
+            DFS(graph,i)
     else:
         return
     
@@ -20,19 +20,15 @@ def printVisited():
 if __name__=="__main__":
     '''
     Declaration of the graph. When a node does not have any edge 
-    leading to another edge, please insert it as an empty list. For example "R":[]
+    leading to another edge, please insert it as an empty list. For example 5:[]
     '''
     graph = {
-    'A' : ['S','B'],
-    'B' : ['A'],
-    'C' : ['D','E','F','S'],
-    'D' : ['C'],
-    'E' : ['C','H'],
-    'F' : ['C','G'],
-    'G' : ['F','S'],
-    'H' : ['E','G'],
-    'S' : ['A','C','G']
+     1: [2,3],
+     2: [4,5],
+     3: [],
+     4: [],
+     5: []
     }
-    #'A' is the root node
-    DFS(graph,'A')
+    #1 is the root node
+    DFS(graph,1)
     printVisited()
