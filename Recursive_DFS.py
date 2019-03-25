@@ -1,7 +1,7 @@
 '''
 A recursive code for DFS for directed and undirected edges.
 '''
-    
+visited=[]    
 #Definition of DFS 
 def DFS(graph,node):
     
